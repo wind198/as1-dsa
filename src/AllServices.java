@@ -36,6 +36,7 @@ public class AllServices {
             ;
 
             switch (answer) {
+
                 case 1:
                     ReceiveInputAndStoreService.receiveInputAndStore();
                     break;
@@ -43,25 +44,31 @@ public class AllServices {
                     ReadTextFileAndPrint.readTextFileAndPrint();
                     break;
                 case 3:
-                    BubbleSort bubleSorter = new BubbleSort();
-                    bubleSorter.begin();
+                    SortService bubbleSorter = new SortService();
+                    bubbleSorter.begin();
+                    bubbleSorter.bubbleSort(bubbleSorter.getContainer());
                     break;
-//                case 4:
-//                    selectionSort();
-//                    break;
+                case 4:
+                    SortService selectionSorter = new SortService();
+                    selectionSorter.begin();
+                    selectionSorter.selectionSort(selectionSorter.getContainer());
+                    break;
                 case 5:
-                    InsertionSort insertionSorter = new InsertionSort();
+                    SortService insertionSorter = new SortService();
                     insertionSorter.begin();
+                    insertionSorter.insertionSort(insertionSorter.getContainer());
                     break;
-//                case 6:
-//                    linearSearch();
-//                    break;
-//                case 6:
-//                    linearSearch();
-//                    break;
-//                case 7:
-//                    binarySearch();
-//                    break;
+//
+                case 6:
+                    SearchService linearSearcher = new SearchService();
+                    linearSearcher.begin();
+                    linearSearcher.linearSearch();
+                    break;
+                case 7:
+                    SearchService binarySearcher = new SearchService();
+                    binarySearcher.begin();
+                    binarySearcher.binarySearch();
+                    break;
 
             }
             System.out.println("Do you want to continue, type 1 to continue and 2 to stop");

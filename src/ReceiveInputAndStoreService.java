@@ -13,7 +13,7 @@ public class ReceiveInputAndStoreService {
     }
     public static void writeToFile(String fileName, String content) {
         try {
-            FileWriter myWriter = new FileWriter(fileName, true);
+            FileWriter myWriter = new FileWriter(fileName, false);
             myWriter.write(content+"\n");
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
